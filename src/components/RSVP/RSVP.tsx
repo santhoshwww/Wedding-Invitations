@@ -9,7 +9,11 @@ export default function RSVP() {
   const [response, setResponse] = useState<Response>(null);
 
   return (
-    <section id="rsvp" className="paper-texture bg-lotus/30 px-6 py-24 text-center md:py-32" aria-label="RSVP">
+    <section
+      id="rsvp"
+      className="section-panel paper-texture mx-6 my-12 rounded-[40px] border border-gold-light/30 bg-lotus/30 px-6 py-24 text-center md:mx-12 md:py-32"
+      aria-label="RSVP"
+    >
       <h2 className="font-heading text-3xl text-maroon-deep md:text-5xl">Will You Join Us?</h2>
       <p className="mt-3 text-temple/70">Tap the envelope, break the seal, and let us know</p>
       <LotusDivider className="my-8" />

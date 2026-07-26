@@ -3,11 +3,24 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: auto; /* Lenis takes over smooth scrolling */
+  scroll-behavior: auto;
+  min-height: 100%;
+  background: radial-gradient(circle at top center, rgba(255, 255, 255, 0.92), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(212, 175, 55, 0.06), transparent 20%),
+    radial-gradient(circle at bottom right, rgba(122, 16, 37, 0.05), transparent 15%);
 }
 
 body {
+  margin: 0;
+  min-height: 100%;
+  background: #FFF8F2;
+  color: #5B3B26;
+  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+}
+
+#root {
+  min-height: 100%;
 }
 
 ::selection {
@@ -15,11 +28,25 @@ body {
   color: #fff8f2;
 }
 
-/* Watercolor paper texture, layered subtly on cream sections */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.section-panel {
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 28px 90px rgba(122, 16, 37, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  backdrop-filter: blur(12px);
+}
+
 .paper-texture {
   background-image:
     radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.05), transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(122, 16, 37, 0.04), transparent 45%);
+    radial-gradient(circle at 80% 70%, rgba(122, 16, 37, 0.04), transparent 45%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.98));
 }
 
 .gold-shimmer-text {
@@ -44,7 +71,6 @@ body {
   scrollbar-width: none;
 }
 
-/* Respect reduced motion preference globally */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

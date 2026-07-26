@@ -38,13 +38,14 @@ export default function Hero() {
       <CoupleSilhouette className="absolute bottom-0 left-1/2 h-[52%] -translate-x-1/2 md:h-[58%]" />
 
       {/* Ground wash */}
-      <div className="absolute bottom-0 left-0 h-[20%] w-full bg-gradient-to-t from-cream to-transparent" />
+      <div className="absolute bottom-0 left-0 h-[24%] w-full bg-gradient-to-t from-cream via-[#FFF8F2] to-transparent" />
+      <div className="absolute inset-x-0 top-16 mx-auto h-1 rounded-full bg-gradient-to-r from-transparent via-[#D4AF37]/60 to-transparent opacity-80" />
 
-      <TempleBell className="absolute left-4 top-4 md:left-10 md:top-8" size={40} />
-      <TempleBell className="absolute right-4 top-4 md:right-10 md:top-8" size={40} />
+      <TempleBell className="absolute left-6 top-6 md:left-10 md:top-10" size={44} />
+      <TempleBell className="absolute right-6 top-6 md:right-10 md:top-10" size={44} />
 
       {/* Copy */}
-      <div className="relative z-10 mt-8 flex flex-col items-center px-6 text-center">
+      <div className="relative z-10 mt-12 flex flex-col items-center px-6 text-center">
         <motion.p
           custom={0}
           initial="hidden"
@@ -63,7 +64,7 @@ export default function Hero() {
           className="mt-4 font-heading text-6xl leading-[1.05] text-maroon-deep md:text-8xl"
         >
           Thulasi
-          <span className="mx-3 inline-block text-3xl text-maroon md:text-5xl" aria-hidden="true">
+          <span className="mx-4 inline-block text-4xl text-maroon md:text-5xl" aria-hidden="true">
             ❤️
           </span>
           <br className="md:hidden" />
@@ -75,7 +76,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="gold-shimmer-text mt-5 font-heading text-sm tracking-[0.5em] md:text-base"
+          className="gold-shimmer-text mt-5 font-heading text-sm tracking-[0.55em] uppercase md:text-base"
         >
           BEGIN OUR FOREVER
         </motion.p>

@@ -28,7 +28,11 @@ const events: EventCard[] = [
 
 export default function Celebrations() {
   return (
-    <section id="celebrations" className="paper-texture bg-cream px-6 py-24 md:py-32" aria-label="Celebration events">
+    <section
+      id="celebrations"
+      className="section-panel paper-texture mx-6 my-12 rounded-[40px] border border-gold-light/30 bg-cream px-6 py-24 md:mx-12 md:py-32"
+      aria-label="Celebration events"
+    >
       <div className="mx-auto max-w-6xl text-center">
         <h2 className="font-heading text-3xl text-maroon-deep md:text-5xl">Join Us For The Celebrations</h2>
         <LotusDivider className="my-6" />
@@ -42,18 +46,18 @@ export default function Celebrations() {
               viewport={{ once: true, amount: 0.4 }}
               transition={{ delay: i * 0.12, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ y: -6 }}
-              className={`flex min-h-[230px] flex-col items-center justify-end rounded-2xl border-2 border-gold-light/70 p-5 text-center shadow-[0_14px_30px_rgba(122,16,37,0.08)] ${ev.bg} ${ev.text} ${
+              className={`flex min-h-[240px] flex-col items-center justify-end rounded-[32px] border border-gold-light/60 p-5 text-center shadow-[0_20px_60px_rgba(122,16,37,0.1)] ${ev.bg} ${ev.text} ${
                 ev.key === "wedding" ? "col-span-2 md:col-span-1" : ""
               }`}
             >
               <CelebrationIcon variant={ev.key} className="mb-4 h-12 w-12" />
-              <h3 className="font-heading text-sm tracking-[0.12em]">{ev.title.toUpperCase()}</h3>
+              <h3 className="font-heading text-sm tracking-[0.16em] uppercase">{ev.title}</h3>
               {ev.teaser ? (
-                <p className="mt-2 font-heading text-base italic">{ev.teaser}</p>
+                <p className="mt-3 max-w-xs font-heading text-base italic">{ev.teaser}</p>
               ) : (
                 <>
-                  <p className="mt-2 text-lg font-semibold">{ev.date}</p>
-                  <p className="mt-0.5 text-xs uppercase tracking-wide opacity-75">{ev.day}</p>
+                  <p className="mt-3 text-lg font-semibold">{ev.date}</p>
+                  <p className="mt-1 text-xs uppercase tracking-[0.22em] opacity-75">{ev.day}</p>
                 </>
               )}
             </motion.div>

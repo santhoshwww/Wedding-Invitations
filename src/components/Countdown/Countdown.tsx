@@ -15,7 +15,11 @@ export default function Countdown() {
   const timeLeft = useCountdown(WEDDING_DATE);
 
   return (
-    <section id="countdown" className="paper-texture bg-cream px-6 py-24 text-center md:py-32" aria-label="Countdown to the wedding">
+    <section
+      id="countdown"
+      className="section-panel paper-texture mx-6 my-12 rounded-[40px] border border-gold-light/30 bg-cream px-6 py-24 text-center md:mx-12 md:py-32"
+      aria-label="Countdown to the wedding"
+    >
       <h2 className="font-heading text-3xl text-maroon-deep md:text-5xl">Countdown To Our Big Day</h2>
       <LotusDivider className="my-6" />
 

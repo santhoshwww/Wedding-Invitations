@@ -19,7 +19,11 @@ const steps: StoryStep[] = [
 
 export default function Story() {
   return (
-    <section id="story" className="paper-texture bg-cream px-6 py-24 md:py-32" aria-label="Our story">
+    <section
+      id="story"
+      className="section-panel paper-texture mx-6 my-12 rounded-[40px] border border-gold-light/30 bg-cream px-6 py-24 md:mx-12 md:py-32"
+      aria-label="Our story"
+    >
       <div className="mx-auto max-w-6xl text-center">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
