@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: auto; /* Lenis takes over smooth scrolling */
+}
+
+body {
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #d4af37;
+  color: #fff8f2;
+}
+
+/* Watercolor paper texture, layered subtly on cream sections */
+.paper-texture {
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.05), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(122, 16, 37, 0.04), transparent 45%);
+}
+
+.gold-shimmer-text {
+  background: linear-gradient(90deg, #a9832a 0%, #f6e3ac 25%, #d4af37 50%, #f6e3ac 75%, #a9832a 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 3.5s linear infinite;
+}
+
+.divider-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Respect reduced motion preference globally */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
